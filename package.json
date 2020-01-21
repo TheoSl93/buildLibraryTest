@@ -2,9 +2,9 @@
   "name": "soap-library",
   "version": "0.0.1",
   "description": "reproduce for stackoverflow",
-  "main": "index.js",
+  "main": "dist/lib/soapLibraryClient.js",
   "repository": "https://github.com/TheoSl93/buildLibraryTest.git",
-  "author": "Theo Sloot <theo@nostradamus.nu>",
+  "author": "Theo Sloot",
   "license": "MIT",
   "scripts": {
     "prebuild": "rm -rf dist",
