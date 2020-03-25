@@ -1,4 +1,5 @@
-import SoapResponseType from 'types/soapResponseType'
+import SoapResponseType from '@/types/soapResponseType'
+import { ResponseEnum } from '@/enums/ResponseEnum'
 
 class SoapLibraryClient {
     public login: string
@@ -12,11 +13,11 @@ class SoapLibraryClient {
     }
 
     public get(params: string): SoapResponseType {
-        return { data: { response: this.url + params } }
+        return { data: { response: this.url + params, status: ResponseEnum.ok } }
     }
     
     public post(params: string): SoapResponseType {
-        return { data: { response:this.url + params } }
+        return { data: { response:this.url + params, status: ResponseEnum.ok } }
     }
 }
 
