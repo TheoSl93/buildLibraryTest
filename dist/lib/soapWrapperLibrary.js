@@ -1,17 +1,19 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var tslib_1 = require("tslib");
-var soapLibraryClient_1 = tslib_1.__importDefault(require("src/soapLibraryClient"));
-var SoapWrapperLibrary = (function () {
-    function SoapWrapperLibrary(login, token) {
+const soapLibraryClient_1 = __importDefault(require("@/soapLibraryClient"));
+class SoapWrapperLibrary {
+    constructor(login, token) {
         this.client = new soapLibraryClient_1.default(login, token);
     }
-    SoapWrapperLibrary.prototype.fetchInfo = function (info) {
+    fetchInfo(info) {
         return this.client.get(info);
-    };
-    SoapWrapperLibrary.prototype.postInfo = function (info) {
+    }
+    postInfo(info) {
         return this.client.post(info);
-    };
-    return SoapWrapperLibrary;
-}());
+    }
+}
+exports.default = SoapWrapperLibrary;
 //# sourceMappingURL=soapWrapperLibrary.js.map

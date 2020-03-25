@@ -7,112 +7,21 @@
   "author": "Theo Sloot",
   "license": "MIT",
   "scripts": {
+    "serve": "ts-node-dev -r tsconfig-paths/register --respawn --transpileOnly ./src/Dev.ts",
     "prebuild": "rm -rf dist",
     "build": "tsc --module commonjs"
   },
   "sideEffects": false,
-  "peerDependencies": {
-    "soap": "^0.30.0"
-  },
   "devDependencies": {
-    "@types/bluebird": "^3.5.29",
-    "@types/jest": "^24.0.23",
-    "@typescript-eslint/eslint-plugin": "^2.8.0",
-    "@typescript-eslint/parser": "^2.8.0",
-    "@vue/babel-preset-app": "^4.1.2",
-    "@vue/cli-plugin-babel": "^4.0.5",
-    "@vue/cli-plugin-eslint": "^4.0.5",
-    "@vue/cli-plugin-typescript": "^4.1.0",
-    "@vue/cli-plugin-unit-jest": "^4.0.5",
-    "@vue/cli-service": "^4.1.0",
-    "@vue/eslint-config-standard": "^5.0.0",
-    "@vue/eslint-config-typescript": "^5.0.0",
-    "babel-core": "7.0.0-bridge.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^6.6.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-vue": "^6.0.1",
-    "jest-localstorage-mock": "^2.4.0",
-    "soap": "^0.30.0",
-    "ts-jest": "^24.2.0",
-    "typescript": "~3.5.3",
-    "vue-template-compiler": "^2.6.10"
+    "module-alias": "^2.2.2",
+    "ts-node-dev": "^1.0.0-pre.43",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "~3.5.3"
   },
   "dependencies": {
-    "global": "^4.4.0",
-    "jest": "^24.9.0",
-    "typedoc": "^0.15.6"
+    "global": "^4.4.0"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/recommended",
-      "@vue/standard",
-      "@vue/typescript"
-    ],
-    "plugins": [
-      "@typescript-eslint"
-    ],
-    "rules": {
-      "no-unused-vars": "off",
-      "no-prototype-builtins": "off",
-      "no-else-return": "error",
-      "@typescript-eslint/no-unused-vars": "error",
-      "@typescript-eslint/type-annotation-spacing": "error",
-      "@typescript-eslint/indent": [
-        "error",
-        2
-      ],
-      "comma-dangle": [
-        "error",
-        "always-multiline"
-      ]
-    },
-    "parserOptions": {
-      "parser": "@typescript-eslint/parser"
-    }
-  },
-  "jest": {
-    "moduleFileExtensions": [
-      "ts",
-      "js"
-    ],
-    "transform": {
-      "^.+\\.js$": "babel-jest",
-      "^.+\\.ts$": "ts-jest"
-    },
-    "transformIgnorePatterns": [
-      "/node_modules/"
-    ],
-    "moduleNameMapper": {
-      "^@/(.*)$": "<rootDir>/src/$1"
-    },
-    "testMatch": [
-      "**/test/unit/**/*.spec.(js)"
-    ],
-    "testURL": "http://localhost/",
-    "globals": {
-      "ts-jest": {
-        "babelConfig": true
-      }
-    },
-    "verbose": true,
-    "collectCoverage": true,
-    "coverageReporters": [
-      "html",
-      "text-summary"
-    ],
-    "coverageDirectory": "<rootDir>/test/coverage",
-    "collectCoverageFrom": [
-      "src/**/*.{js,ts}",
-      "!src/main.ts",
-      "!**/node_modules/**"
-    ]
+  "_moduleAliases": {
+    "@": "src"
   }
 }

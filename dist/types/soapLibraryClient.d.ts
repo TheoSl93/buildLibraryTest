@@ -1,4 +1,4 @@
-import SoapResponseType from 'types/soapResponseType';
+import SoapResponseType from '@/types/soapResponseType';
 declare class SoapLibraryClient {
     login: string;
     token: string;

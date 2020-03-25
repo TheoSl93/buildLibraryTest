@@ -1,5 +1,5 @@
-import SoapLibraryClient from 'src/soapLibraryClient'
-import SoapResponseType from 'types/soapResponseType'
+import SoapLibraryClient from '@/soapLibraryClient'
+import SoapResponseType from '@/types/soapResponseType'
 
 class SoapWrapperLibrary {
     public client: SoapLibraryClient
@@ -15,3 +15,5 @@ class SoapWrapperLibrary {
         return this.client.post(info)
     }
 }
+
+export default SoapWrapperLibrary
