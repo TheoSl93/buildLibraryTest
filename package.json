@@ -2,17 +2,21 @@
   "name": "soap-library",
   "version": "0.0.1",
   "description": "reproduce for stackoverflow",
-  "main": "dist/lib/soapLibraryClient.js",
+  "main": "dist/lib/SoapWrapperLibrary.js",
+  "module": "dist/lib/SoapWrapperLibrary.m.js",
+  "source": "src/SoapWrapperLibrary.ts",
+  "types": "dist/types/SoapWrapperLibrary.d.ts", 
   "repository": "https://github.com/TheoSl93/buildLibraryTest.git",
   "author": "Theo Sloot",
   "license": "MIT",
   "scripts": {
     "serve": "ts-node-dev -r tsconfig-paths/register --respawn --transpileOnly ./src/Dev.ts",
     "prebuild": "rm -rf dist",
-    "build": "tsc --module commonjs"
+    "build": "microbundle"
   },
   "sideEffects": false,
   "devDependencies": {
+    "microbundle": "^0.11.0",
     "module-alias": "^2.2.2",
     "ts-node-dev": "^1.0.0-pre.43",
     "tsconfig-paths": "^3.9.0",
