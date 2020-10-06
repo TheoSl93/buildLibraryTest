@@ -2,26 +2,40 @@
   "name": "soap-library",
   "version": "0.0.1",
   "description": "reproduce for stackoverflow",
-  "main": "dist/lib/soapLibraryClient.js",
+  "main": "dist/lib/SoapWrapperLibrary.js",
+  "types": "dist/types/SoapWrapperLibrary.d.ts",
   "repository": "https://github.com/TheoSl93/buildLibraryTest.git",
   "author": "Theo Sloot",
   "license": "MIT",
   "scripts": {
-    "serve": "ts-node-dev -r tsconfig-paths/register --respawn --transpileOnly ./src/Dev.ts",
+    "dev": "ts-node-dev -r tsconfig-paths/register --respawn ./src/Dev.ts",
+    "test:unit": "jest ./test",
     "prebuild": "rm -rf dist",
-    "build": "tsc --module commonjs"
+    "build": "tsc"
   },
   "sideEffects": false,
   "devDependencies": {
-    "module-alias": "^2.2.2",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-typescript": "^7.9.4",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-typescript": "^7.9.0",
+    "@types/bluebird": "^3.5.29",
+    "@types/jest": "^25.1.4",
+    "@types/node": "^12.12.31",
+    "@typescript-eslint/eslint-plugin": "^2.8.0",
+    "@typescript-eslint/parser": "^2.8.0",
+    "axios": "^0.19.2",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^25.2.1",
+    "eslint": "^6.6.0",
+    "jest": "^24.9.0",
+    "jest-config": "^23.6.0",
+    "jest-localstorage-mock": "^2.4.0",
+    "timemachine": "^0.3.1",
+    "ts-jest": "^24.2.0",
     "ts-node-dev": "^1.0.0-pre.43",
     "tsconfig-paths": "^3.9.0",
+    "typedoc": "^0.15.6",
     "typescript": "~3.5.3"
-  },
-  "dependencies": {
-    "global": "^4.4.0"
-  },
-  "_moduleAliases": {
-    "@": "src"
   }
 }

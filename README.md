@@ -4,7 +4,8 @@
 
 - clone the repo
 - execute `yarn install`
-- make a build with `yarn build`
+- run the tests with `yarn test:unit`
 
 ## Expectations:
-- The SoapResponseType is included in the `dist` folder
+- Both calls in the the setTimeout method are called in the test.
+- Fix: remove `.skip` from the test in order to run the test correctly.
